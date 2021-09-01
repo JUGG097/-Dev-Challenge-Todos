@@ -1,0 +1,8 @@
+/* To customized Bootstrao default Tabs */
+.nav-pills .nav-link.active {
+    color: black;
+    border-bottom: 4px solid #2F80ED;
+    background-color: white;
+    border-radius: 4px 4px 0px 0px;
+}
+

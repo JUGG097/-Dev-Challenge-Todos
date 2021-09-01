@@ -1,0 +1,17 @@
+.my_container {
+    max-width: 400px;
+    border: 1px solid red;
+}
+
+.my_nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+    border-bottom: 2px solid #BDBDBD;
+}
+
+.my_navlink {
+    color: black;
+}
