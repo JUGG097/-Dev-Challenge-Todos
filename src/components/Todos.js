@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Todos.module.css";
+import uniqid from "uniqid";
 
 const TodoList = ({ todo, toggleTask }) => {
 	return (
@@ -105,7 +106,6 @@ const CompleteTodoList = ({ todo, toggleTask, deleteTask }) => {
 };
 
 const Todos = () => {
-	const todoStorage = JSON.parse(localStorage.getItem("todos"));
 	const [todos, setTodos] = useState([]);
 	const [formdata, setFormData] = useState("");
 	const activeTodos = todos.filter((todo) => todo.completed === false);
@@ -131,7 +131,14 @@ const Todos = () => {
 	const deleteAll = () => {
 		const newTodos = todos.filter((todo) => todo.completed === false);
 		setTodos(newTodos);
-		// localStorage.setItem("todos", todos);
+
+		localStorage.setItem("todos", JSON.stringify(newTodos));
+	};
+
+	const clearAll = () => {
+		const newTodos = [];
+		setTodos(newTodos);
+
 		localStorage.setItem("todos", JSON.stringify(newTodos));
 	};
 
@@ -141,25 +148,17 @@ const Todos = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setTodos([
+		const newTodos = [
 			...todos,
 			{
-				id: todos.length + 1,
+				id: uniqid(),
 				taskname: formdata,
 				completed: false,
 			},
-		]);
-		localStorage.setItem(
-			"todos",
-			JSON.stringify([
-				...todoStorage,
-				{
-					id: todoStorage.length + 1,
-					taskname: formdata,
-					completed: false,
-				},
-			])
-		);
+		];
+		setTodos(newTodos);
+
+		localStorage.setItem("todos", JSON.stringify(newTodos));
 
 		setFormData("");
 	};
@@ -263,6 +262,23 @@ const Todos = () => {
 								toggleTask={toggleTask}
 							/>
 						))}
+						<div className="row mt-2">
+							<div className="col-12 text-right">
+								<button
+									type="submit"
+									className={`btn mb-2 btn-primary ${styles.my_btn}`}
+									onClick={clearAll}
+								>
+									<i
+										className="far fa-trash-alt"
+										style={{
+											color: "#BDBDBD",
+										}}
+									></i>{" "}
+									Clear All
+								</button>
+							</div>
+						</div>
 					</div>
 					<div
 						className="tab-pane fade p-2"
