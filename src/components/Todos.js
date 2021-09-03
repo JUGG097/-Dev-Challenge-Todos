@@ -339,6 +339,23 @@ const Todos = () => {
 					</div>
 				</div>
 			</div>
+			{/* Footer */}
+
+			{/* <footer
+				className="mt-4 p-4"
+				style={{
+					backgroundColor: "#1C313A",
+					color: "white",
+				}}
+			>
+				<div className="container">
+					<div className="row">
+						<div className="col-12 text-center">
+							<p>Created By Adeoluwa Adeboye - devChallenge.io</p>
+						</div>
+					</div>
+				</div>
+			</footer> */}
 		</>
 	);
 };
