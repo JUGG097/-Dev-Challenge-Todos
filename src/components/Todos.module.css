@@ -5,6 +5,7 @@
     font-weight: 600;
     font-style: normal;
     font-size: 14px;
+    padding-bottom: 100px; 
 }
 
 .my_nav {
@@ -47,4 +48,11 @@
 
 .my_completedTodo{
     text-decoration: line-through;
+}
+
+.my_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
 }

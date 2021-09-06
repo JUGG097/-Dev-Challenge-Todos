@@ -357,8 +357,8 @@ const Todos = () => {
 			</div>
 			{/* Footer */}
 
-			{/* <footer
-				className="mt-4 p-4"
+			<footer
+				className={`mt-4 p-4 ${styles.my_footer}`}
 				style={{
 					backgroundColor: "#1C313A",
 					color: "white",
@@ -371,7 +371,7 @@ const Todos = () => {
 						</div>
 					</div>
 				</div>
-			</footer> */}
+			</footer>
 		</>
 	);
 };
