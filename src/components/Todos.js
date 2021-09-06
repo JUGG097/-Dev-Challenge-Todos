@@ -357,13 +357,7 @@ const Todos = () => {
 			</div>
 			{/* Footer */}
 
-			<footer
-				className={`mt-4 p-4 ${styles.my_footer}`}
-				style={{
-					backgroundColor: "#1C313A",
-					color: "white",
-				}}
-			>
+			<footer className={`mt-4 p-4 ${styles.my_footer}`} style={{}}>
 				<div className="container">
 					<div className="row">
 						<div className="col-12 text-center">
