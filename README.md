@@ -6,7 +6,7 @@ Deployed with `Netlify` link [here](https://todo-adeoluwa.netlify.app/).
 
 Figma design link [here](https://www.figma.com/file/SClDA1weEGA3Mo8Is8Sbf2/todo?node-id=0%3A1).
 
-Figma design was provided by [devChallenges.io](devChallenges.io).
+Figma design was provided by [devChallenges.io](https://devchallenges.io/).
 
 You can clone project and customise at your end.
 
